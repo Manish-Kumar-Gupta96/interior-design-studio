@@ -37,3 +37,6 @@ Thumbs.db
 
 # TypeScript
 *.tsbuildinfo
+
+# Build archives
+interior-design-studio.zip
