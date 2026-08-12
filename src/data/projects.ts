@@ -92,7 +92,7 @@ export const projects: Project[] = [
     heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600',
     gallery: [
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600',
-      'https://images.unsplash.com/photo-1600565192248-8a4ae622529c?q=80&w=1600',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600',
       'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600'
     ],
     description: 'An expansive industrial loft utilizing board-formed raw concrete surfaces, exposed pipeline systems, and highly detailed leather and brass elements to balance hard architectural structural features.',
