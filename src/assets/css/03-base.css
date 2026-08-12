@@ -1,0 +1,50 @@
+body {
+  overflow-x: hidden;
+}
+
+body.is-menu-open {
+  overflow: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+address {
+  font-style: normal;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}

@@ -1,0 +1,121 @@
+.studio-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color var(--transition-base), gap var(--transition-base);
+}
+
+.studio-link::after {
+  content: "↗";
+  font-size: var(--fs-sm);
+  transition: transform var(--transition-base);
+}
+
+.studio-link:hover {
+  color: var(--color-accent);
+  gap: var(--space-4);
+}
+
+.studio-link:hover::after {
+  transform: translate(3px, -3px);
+}
+
+.studio-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 54px;
+  padding: 0 32px;
+  overflow: hidden;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base);
+  border: 1px solid transparent;
+  z-index: 1;
+}
+
+.studio-button-icon {
+  font-size: var(--fs-sm);
+  transition: transform var(--transition-base);
+}
+
+.studio-button:hover .studio-button-icon {
+  transform: translate(2px, -2px);
+}
+
+.studio-button-dark {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.studio-button-dark:hover {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.studio-button-light {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
+}
+
+.studio-button-light:hover {
+  background: transparent;
+  color: var(--color-white);
+}
+
+.studio-button-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.studio-button-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.image-wrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-background-alt);
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.image-wrap:hover img {
+  transform: scale(1.06);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider-light {
+  background: var(--color-border-light);
+}
+
+.section-number {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
