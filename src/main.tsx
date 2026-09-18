@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "jquery-ui/ui/widget";
-import "jquery-ui/ui/widgets/accordion";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -22,25 +19,30 @@ import { gsap } from "gsap";
 import App from "./App";
 import "./assets/css/main.css";
 
+try {
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 80
+  });
+} catch (e) {
+  console.warn("AOS init error:", e);
+}
 
-AOS.init({
-  duration: 900,
-  easing: "ease-out-cubic",
-  once: true,
-  offset: 80,
-  disable: () => window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches
-});
+try {
+  gsap.config({
+    nullTargetWarn: false
+  });
+} catch (e) {
+  console.warn("GSAP config error:", e);
+}
 
-gsap.config({
-  nullTargetWarn: false
-});
-
-ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
